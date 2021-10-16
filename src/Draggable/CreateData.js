@@ -45,7 +45,7 @@ export default function CreateData({ save, show, onHide }) {
         save(taskobj) 
         onHide()  
         console.log(taskobj)
-        setText("")
+        setText("")  
         setDescription("")
         setCategory("")
     }
