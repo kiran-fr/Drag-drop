@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+.App{
+ overflow: scroll;
+ height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dragable{
+   display: flex;
+  max-width: 95%;
+  margin-top: 40px;
+  justify-content: space-around;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ .column{
+  margin: 20px !important;
+}
+@media (min-width:1000px) {
+  .column{
+    margin-top: 20px;
+    margin: 80px !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.droppable-col{
+  width: 100%;
+  min-height: 250px;
+  border:2px solid #ccc;
+  border-radius: 7px;
+  padding: 10px;
+  background-color: #cacaca;
+  box-shadow: 1px 1px 15px #ccc;
+}
+
+
+.item{
+  background-color: transparent;
+  font-weight: 500;
+  color: #6a6a6a;
+  font-size: 12px;
+  box-shadow: 1px 1px 15px  #ccc;
+  border-radius: 7px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.heading{
+  font-weight: bold;
+  font-size: 10px;
+}
+.form{
+  margin: 30px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50%;
 }
-
-.App-link {
-  color: #61dafb;
+.select_box option{
+  background-color: red;
+  width: 20px !important;
+  background-color: transparent !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h4{
+  /* background-color: red; */
+  font-size: 20px !important;
+  border-radius: 7px;
+  padding: 5px 3px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase !important;
+  background-color: #cacaca;
+  
+  box-shadow: 1px 1px 15px #ccc;  
 }
