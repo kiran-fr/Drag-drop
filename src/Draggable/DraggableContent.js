@@ -85,7 +85,7 @@ import _ from 'lodash'
         tasks[t.category].push(
             <div draggable className="item" 
                 onDragStart= {(e)=>onDragStart(e,indx)} 
-                style={{borderTop:t.category==="open"?"3px solid red":t.category==="inprogress"?
+                style={{borderTop:t.category==="open"?"3px solid #6A6A6A":t.category==="inprogress"?
                 "3px solid yellow":t.category==="completed"?"3px solid green":""
             }}
                 key={indx} >
