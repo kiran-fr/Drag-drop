@@ -6,6 +6,7 @@ import { Modal,Button, Form } from 'react-bootstrap'
 
 // LOADASH
 import _ from 'lodash'
+import moment from 'moment'
 
 // Main function
 export default function Update({ data, show, onHide, updateTask }) {
@@ -13,7 +14,7 @@ export default function Update({ data, show, onHide, updateTask }) {
     const [text,setText] = useState("")
     const [description,setDescription] = useState("")
     const [category,setCategory] = useState("")
-    
+    const [date,setDate] = useState(moment(new Date()).format('LLL'))
     // FUNCTION
 
     // UPDATE FUNCTION
@@ -23,6 +24,7 @@ export default function Update({ data, show, onHide, updateTask }) {
         tempObj['title'] = text
         tempObj['description'] = description
         tempObj['category'] = category
+        tempObj["date"]=date
         updateTask(tempObj)
         onHide()
     }
@@ -82,7 +84,7 @@ export default function Update({ data, show, onHide, updateTask }) {
                     </Form>                
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={onHide} variant="secondary" >Cancel</Button>
+                    <Button onClick={onHide} variant="secondary">Cancel</Button>
                     <Button onClick={updateData}>Update</Button>
                 </Modal.Footer>
             </Modal>

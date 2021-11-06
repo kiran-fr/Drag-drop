@@ -81,7 +81,7 @@ import _ from 'lodash'
         const state = JSON.parse(json);
         setItem(state);    
     }, []);
-    {item.tasks.map((t,indx)=> {
+    item.tasks.map((t,indx)=> {
         tasks[t.category].push(
             <div draggable className="item" 
                 onDragStart= {(e)=>onDragStart(e,indx)} 
@@ -94,11 +94,10 @@ import _ from 'lodash'
                     indx={indx}  
                     updateData={updateData}
                     Delete={deleteData}
-                    
                 />
             </div>
         )
-    })}
+    })
     // store data in local storage
     useEffect(()=>{
         let json = JSON.stringify(item)
